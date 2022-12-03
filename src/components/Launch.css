@@ -1,0 +1,32 @@
+.content-wrapper {
+  display: grid;
+  border: 1px solid black;
+  margin: 80px;
+  overflow-x: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "i nm dt"
+    "i ds dt"
+    "i ds dt";
+
+}
+
+.img {
+  grid-area: i;
+
+
+}
+
+.name {
+  grid-area: nm;
+  font-weight: bold;
+}
+
+.description {
+  grid-area: ds;
+}
+
+.date {
+  grid-area: dt;
+}
