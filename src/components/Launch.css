@@ -14,9 +14,13 @@
 
 .img {
   grid-area: i;
-
-
+  overflow: hidden;
 }
+
+img {
+  max-height: 300px;
+  max-width: 300px;
+} 
 
 .name {
   grid-area: nm;
