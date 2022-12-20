@@ -41,6 +41,8 @@ function App() {
     return launchSiteFilterPassed && rocketFilterPassed;
   });
 
+  const hasLaunches = filteredLaunches.length > 0;
+
   if (loading) {
     return <div>...loading</div>;
   }
@@ -62,10 +64,11 @@ function App() {
       >
         Rockets
       </Select>
-
-      {filteredLaunches.map((launch) => (
-        <Launch launch={launch} />
-      ))}
+      {!hasLaunches ? (
+        <div>Results not found</div>
+      ) : (
+        filteredLaunches.map((launch) => <Launch launch={launch} />)
+      )}
     </div>
   );
 }
